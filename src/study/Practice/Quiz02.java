@@ -29,6 +29,7 @@ public class Quiz02 {
 		System.out.printf("빼기 : %d - %d  = %d \n" , firstNum , secondNum , firstNum - secondNum );
 		System.out.printf("곱하기 : %d * %d  = %d \n" , firstNum , secondNum , firstNum * secondNum );
 		System.out.printf("나누기 : %d / %d  = %.2f \n " , firstNum , secondNum , (double)firstNum / secondNum );
-		// 정수형은 %d 실수형은 %f
+		// 정수형은 %d 실수형은 %f %뒤에 붙이는 숫자로 빈자릿수에 공백추가 가능
+		
 	}
 }
