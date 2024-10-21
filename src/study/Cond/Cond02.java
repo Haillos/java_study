@@ -149,9 +149,25 @@ public class Cond02 {
 					// 일찍 조금
 				} else if (goBedTime > 21 && !(sleepTime >= 9) ) {
 					// 늦게 많이
-				} el
-	
-	
+				} 
+				
+				char grade = 'B';
+				switch(grade) {
+				case 'A' :
+				case 'a' :
+					System.out.println("1");
+				case 'B' :
+				case 'b' :
+					System.out.println("2");
+				case 'C' :
+				case 'c' :
+					System.out.println("3");
+				case 'D' :
+				case 'd' :
+					System.out.println("4");
+					break;
+					default :
+						System.out.println("5");
 
 	
 	
