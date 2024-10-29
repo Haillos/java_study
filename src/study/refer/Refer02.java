@@ -1,4 +1,4 @@
-package study.refer;
+package study.refer
 Week.java;
 public class Refer02 {
 	public static void main(String[] args) {
