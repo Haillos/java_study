@@ -14,14 +14,14 @@ public class Phone {
 
 	
 	Phone(String model) {
-		this(model, 100, 3000);
+		this(model, 100, battery);
 		this.model = model;
 		this.price = price;
 		this.battery = battery;
 	}
 	
 	Phone(String model, int price) {
-		this(model, price , 3000);
+		this(model, price , battery);
 		this.model = model;
 		this.price = price;
 		this.battery = battery;
@@ -33,7 +33,9 @@ public class Phone {
 		this.battery = battery;
 	}
 
-
+void printInfo() {
+	System.out.println(battery);
+}
 }
 
 
