@@ -1,7 +1,9 @@
 package study.Inherit.Inherit01;
 
-public class Parent {
-	int money;
+public class Parent extends GrandParent {
+	//public int money;
+	protected int money;
+	// default + 자식클래스 접근 가능
 
 	
 	
