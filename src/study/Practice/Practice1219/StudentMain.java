@@ -1,4 +1,4 @@
-package study.Practice1219;
+package study.Practice.Practice1219;
 
 public class StudentMain {
 	public static void main(String[] args) {

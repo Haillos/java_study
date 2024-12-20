@@ -1,4 +1,4 @@
-package study.Practice1219;
+package study.Practice.Practice1219;
 
 public class Computer {
 	
