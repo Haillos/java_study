@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main01 {
+	java.util.List;
+	java.util.ArrayList;
+	
 	public static void main(String[] args) {
 		Cleaner c1 = new Cleaner();
 		Cleaner c2 = new DustCleaner();
@@ -28,5 +31,11 @@ public class Main01 {
 		for (Cleaner c : list) {
 			c.doClean();
 		}
+		
+	
+		DustCleaner d1 = (DustCleaner)c1;
+		d1.arrangeItem();
+		
+		
 	}
 }
