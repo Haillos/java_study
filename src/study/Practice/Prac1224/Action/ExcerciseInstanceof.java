@@ -8,7 +8,9 @@ public class ExcerciseInstanceof {
 	} // main
 
 	public void action(Robot robot) {
-		
+		if(robot               instanceof DanceRobot) {
+			(robot)robot;
+		}
 	}
 }
 
