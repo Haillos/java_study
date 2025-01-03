@@ -1,22 +1,21 @@
-package study.Practice.Prac0102;
+package study.Practice;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
-public class dbPrac {
-
+import study.db.sample.v1.Dept;
+ 
+public class Quiz0103 {
 	public static void main(String[] args) {
-		ProductDTO pd = findProfessorListByDeptno(int deptno);
-		if(pd != null) {
-			System.out.println("%d %s %d\n", pd.getpCode(), pd.getpName(), pd.getpPrice());
-		}
+		List<ProfessorDTO> list = findProfessorListByDeptno(0); 
 	}
 
-	public static void findProfessorListByDeptno(int deptno) { // 단일 조회
+	public static ProfessorDTO findProfessorListByDeptno(int deptno) { // 단일 조회
 		
 		
 		try {
@@ -41,7 +40,7 @@ public class dbPrac {
 			e.printStackTrace();
 		}
 		
-//		List<ProductDTO> productList = new ArrayList<ProductDTO>;
+		List<ProfessorDTO> professorList = new ArrayList<ProfessorDTO>;
 		
 		// 쿼리 준비
 		String sqlQuery = "select * from professor where deptno = ? ";
@@ -50,20 +49,19 @@ public class dbPrac {
 
 			psmt = conn.prepareStatement(sqlQuery);
 			rs = psmt.executeQuery();
+			
 
-			if (rs.next()) { // 다음 읽어올 데이터가 있는가? true 데이터가 있다
-				// System.out.println(rs.getInt(1));
-				// System.out.println(rs.getString(2));
-				// System.out.println(rs.getString(3));
-				pi = new ProfessorDTO();
+			while(rs.next()) {
+				ProfessorDTO p = new ProfessorDTO();
 				
-				pd.setpNo(rs.getInt("p_code"));
-				pd.setpName(rs.getString("p_name"));
-				pd.setpID(rs.getInt("p_price"));
-				pd.
-//while(rs.next()) {
-//	ProductDTO pd = new ProductDTO(rs.getInt("p_code"),rs.getString("p_name"), rs.getInt("p_price"));
-//}
+				p.setpNo(rs.getInt("profno"));
+				p.setpName(rs.getString("name"));
+				p.setpId(rs.getInt("id"));
+				p.setpPosition(rs.getString("position"));
+				p.setpPay(rs.getInt("pay"));
+				p.setpDeptno(rs.getInt("deptno"));
+			}
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -82,16 +80,6 @@ public class dbPrac {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	}
 
-	}
-
-	public static List<ProductDTO> findProductList() {// 복수(리스트) 조회
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-	}
-
+}
 }

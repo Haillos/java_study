@@ -1,14 +1,14 @@
-package study.db_sample;
+package study.db.sample.v2;
 	
-// DTO( Data Transfer Object)
 public class Dept {
+
 	int deptno;
 	String dname;
 	String loc;
 	
 	public Dept() {
 	}
-	
+
 	public Dept(int deptno, String dname, String loc) {
 		this.deptno = deptno;
 		this.dname = dname;
@@ -33,6 +33,5 @@ public class Dept {
 	public void setLoc(String loc) {
 		this.loc = loc;
 	}
-	
 	
 }
